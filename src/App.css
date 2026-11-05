@@ -1,0 +1,379 @@
+
+.container {
+  width: min(100% - 80px, 1240px);
+  margin-inline: auto;
+}
+
+/* Announcement bar */
+
+.announcement-bar {
+  background-color: #a88959;
+  color: #171714;
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+/* Header */
+
+.site-header {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.brand {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #c8a16a;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-icons button {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: #f3ede2;
+}
+
+/* Hero section */
+
+.hero {
+  position: relative;
+  min-height: 610px;
+  height: 85vh;
+  max-height: 680px;
+
+  display: flex;
+  align-items: center;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(10, 7, 5, 0.65) 0%,
+      rgba(10, 7, 5, 0.15) 65%,
+      transparent 100%
+    ),
+    url("/images/aure-hero.png");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 100px;
+}
+
+.hero-eyebrow {
+  color: #d7b47e;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0 0 24px;
+}
+
+.hero-title {
+  max-width: 660px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(60px, 6.5vw, 104px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -2px;
+  margin: 0 0 26px;
+}
+
+.hero-description {
+  max-width: 410px;
+  color: #e0d6c8;
+  font-size: 13px;
+  line-height: 1.9;
+  margin: 0 0 32px;
+}
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  padding: 17px 25px;
+  background-color: #b28a53;
+  color: #171714;
+  font-size: 12px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #d3ac75;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .container {
+    width: min(100% - 48px, 1240px);
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .hero {
+  min-height: 520px;
+  height: 70vh;
+  max-height: 620px;
+  background-position: 60% center;
+}
+
+  .hero-title {
+    font-size: clamp(55px, 7vw, 80px);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 640px) {
+  .container {
+    width: min(100% - 36px, 1240px);
+  }
+
+  .site-header {
+    top: 35px;
+  }
+
+  .navbar {
+    min-height: 70px;
+  }
+
+  .brand {
+    font-size: 30px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-icons {
+    gap: 15px;
+  }
+
+  .hero {
+  min-height: 560px;
+  height: auto;
+  max-height: none;
+  background-position: 65% center;
+}
+
+  .hero-content {
+  padding-top: 160px;
+  padding-bottom: 70px;
+}
+
+  .hero-title {
+    max-width: 420px;
+    font-size: clamp(50px, 11vw, 70px);
+  }
+
+  .hero-description {
+    max-width: 330px;
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+
+/* Signature collection */
+
+.collection-section {
+  padding: 110px 0 120px;
+  background-color: #f3ede2;
+  color: #29211d;
+}
+
+.collection-heading {
+  max-width: 680px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.section-eyebrow {
+  margin-bottom: 18px;
+  color: #a88959;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.collection-heading h2 {
+  margin: 0 0 20px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(42px, 4vw, 64px);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.collection-heading > p:last-child {
+  color: #7b7168;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.perfume-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.perfume-card {
+  min-width: 0;
+}
+
+.perfume-image {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-color: #e8ded0;
+}
+
+.perfume-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.perfume-card:hover .perfume-image img {
+  transform: scale(1.06);
+}
+
+.perfume-details {
+  padding: 22px 2px;
+}
+
+.perfume-category {
+  color: #a88959;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.perfume-details h3 {
+  margin: 10px 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 29px;
+  font-weight: 600;
+}
+
+.perfume-details > p {
+  min-height: 42px;
+  color: #7b7168;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.perfume-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.perfume-price {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.perfume-link {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid #b9a991;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.perfume-link:hover {
+  background-color: #ddc9a9;
+}
+
+/* Collection responsive layout */
+
+@media (max-width: 1000px) {
+  .perfume-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .collection-section {
+    padding: 75px 0;
+  }
+
+  .collection-heading {
+    margin-bottom: 35px;
+  }
+
+  .perfume-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .perfume-image {
+    aspect-ratio: 4 / 4;
+  }
+
+  .perfume-details > p {
+    min-height: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .perfume-image img {
+    transition: none;
+  }
+}
+
